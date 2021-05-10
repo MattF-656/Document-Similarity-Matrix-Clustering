@@ -11,7 +11,7 @@ LDA is a generative Bag-of-Words model that uses probabilities to assign words t
 - This is largely a result of the Bag-of-Words portion of the data preparation for the model. The word becomes disassociated from its original document and therefore in the presence of many of the same word the models ability to measure which topic the word may have originated from is lessend to a greater extent than when the occurence of that word is proportionally less.
 
 ## Document Similarity Matrix Clustering (DSCM)
-DSCM is a method of topic creation that considers all documents versus all the other documents in question and does not decompose the set of documents in question into a Bag-of-Words keeping proportionally high frequency words within the context of their original document.
+DSCM is a method of topic creation that considers all documents versus all the other documents in question and does not decompose the set of documents into a Bag-of-Words, keeping proportionally high frequency words within the context of their original document.
 ### Pro
 - As a result of the documents not being decomposed, in the presence of proptionally high frequency words, this method can still generate distinguishable topic groups of documents.
 ### Con
