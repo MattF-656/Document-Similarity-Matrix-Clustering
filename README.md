@@ -4,11 +4,11 @@ Document similarity comparison and clustering using similarity matricies and mat
 ## Latent Dirichlet Allocation (LDA)
 LDA is a generative Bag-of-Words model that uses probabilities to assign words to a topic that potentially insighted the use of that word originally. 
 ### Pro
-- It is a learned model and therefore can assign unseen documents to a topic that it generated during training.
+- It is a learned model, therefore can assign unseen documents to a topic that it generated during training.
 ### Con
 - This method does not generate good topics in the presence of noisy data. That is a set of many documents that have a proportionally small number of words that are used in a majority of the documents. This results in a large amount of overlap for the weighted keywords that the model determines important indicators of a topic when assigning documents.
 - It is then difficult to distinguish the difference in meaning between the resulting topics.
-- This is largely a result of the Bag-of-Words portion of the data preparation for the model. The word becomes disassociated from its original document and therefore in the presence of many of the same word it losses its context to a greater extent than when the occucerence of that word is proportionally less.
+- This is largely a result of the Bag-of-Words portion of the data preparation for the model. The word becomes disassociated from its original document and therefore in the presence of many of the same word the models ability to measure which topic the word may have originated from is lessend to a greater extent than when the occurence of that word is proportionally less.
 
 ## Document Similarity Matrix Clustering (DSCM)
 DSCM is a method of topic creation that considers all documents versus all the other documents in question and does not decompose the set of documents in question into a Bag-of-Words keeping proportionally high frequency words within the context of their original document.
