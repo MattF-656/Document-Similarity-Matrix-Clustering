@@ -2,16 +2,16 @@
 Document similarity comparison and clustering using similarity matricies and matrix clustering algorithms in the presence of noisy text data.
 
 ## Latent Dirichlet Allocation (LDA)
-LDA is a generative Bag-of-Words model that uses probabilities to assign words to a topic that potentially insighted the use of that word originally. 
+LDA is a generative bag-of-words model that uses probabilities to assign words to a topic that potentially insighted the use of that word originally. 
 ### Pro
 - It is a learned model, therefore can assign unseen documents to a topic that it generated during training.
 ### Con
-- This method does not generate good topics in the presence of noisy data. That is a set of many documents that have a proportionally small number of words that are used in a majority of the documents. This results in a large amount of overlap for the weighted keywords that the model determines important indicators of a topic when assigning documents.
+- This method does not generate desirable topics in the presence of noisy data. That is, a set of many documents that have a proportionally small number of words that make up a majority of the documents. This results in a large amount of overlap in the weighted keywords that the model determined are important indicators when assigning documents to a topic.
 - It is then difficult to distinguish the difference in meaning between the resulting topics.
-- This is largely a result of the Bag-of-Words portion of the data preparation for the model. The word becomes disassociated from its original document and therefore in the presence of many of the same word the models ability to measure which topic the word may have originated from is lessend to a greater extent than when the occurence of that word is proportionally less.
+- This is largely a result of the bag-of-words portion of the data preparation for LDA. The word becomes disassociated from its original document and therefore in the presence of high frequency words in the documents, the models ability to measure which topic the word originated from is lessend to an undesirable extent.
 
 ## Document Similarity Matrix Clustering (DSMC)
-DSMC is a method of topic creation that considers all documents versus all the other documents in question and does not decompose the set of documents into a Bag-of-Words, keeping proportionally high frequency words within the context of their original document.
+DSMC is a method of topic creation that considers all documents versus all the other documents in question and does not decompose the set of documents into a bag-of-words, keeping high frequency words within the context of their original document.
 ### Pro
 - As a result of the documents not being decomposed, in the presence of proptionally high frequency words, this method can still generate distinguishable topic groups of documents.
 ### Con
@@ -25,5 +25,5 @@ DSMC is a method of topic creation that considers all documents versus all the o
   - USE
   - Word2Vec
 - Optimizes the number of topics using an affinity matrix conversion of the similarity matrix, and then performs an eigen decomposition of that affinity matrix identifying the largest gap corresponding to the number of clusters by eigengap heuristic.
-- Applies spectral clustering to the original similarity matrix with the optimized best number of topics to assign documents to a group.
+- Applies spectral clustering to the original similarity matrix with the optimized best number of topics to assign documents to a cluster.
 - Cluster assignments are then be mapped back to the original comment, grouped by cluster assignment, and then viewed as the generated document groups.
