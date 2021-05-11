@@ -26,4 +26,4 @@ DSCM is a method of topic creation that considers all documents versus all the o
   - Word2Vec
 - Optimizes the number of topics using an affinity matrix conversion of the similarity matrix, and then performs an eigen decomposition of that affinity matrix identifying the largest gap corresponding to the number of clusters by eigengap heuristic.
 - Applies spectral clustering to the original similarity matrix with the optimized best number of topics to assign documents to a group.
-- Cluster assignments can then be mapped back to the original comment, grouped by cluster assignment, and then viewed as the generated topic groupings.
+- Cluster assignments are then be mapped back to the original comment, grouped by cluster assignment, and then viewed as the generated document groupings.
