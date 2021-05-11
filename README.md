@@ -6,7 +6,7 @@ LDA is a generative bag-of-words model that uses probabilities to assign words t
 ### Pro
 - It is a learned model, therefore it can assign unseen documents to a topic that it generated during training.
 ### Con
-- This method does not generate desirable topics in the presence of noisy data. That is, a set of many documents that have a proportionally small number of words that make up a majority of the documents. This results in a large amount of overlap in the weighted keywords that the model determined are important indicators when assigning documents to a topic.
+- This method does not generate desirable topics in the presence of noisy data. That is, a set of many documents that have a proportionally small number of words that make up a majority of the documents. This results in a large amount of overlap in the weighted keywords that the model determined are important indicators for assigning documents to a topic.
 - It is then difficult to distinguish the difference in meaning between the resulting topics.
 - This is largely a result of the bag-of-words portion of the data preparation for LDA. The word becomes disassociated from its original document and therefore within the presence of high frequency words in the documents, the models ability to measure which topic the word originated from is lessend to an undesirable extent.
 
