@@ -8,14 +8,14 @@ LDA is a generative bag-of-words model that uses probabilities to assign words t
 ### Con
 - This method does not generate desirable topics in the presence of noisy data. That is, a set of many documents that have a proportionally small number of words that make up a majority of the documents. This results in a large amount of overlap in the weighted keywords that the model determined are important indicators for assigning documents to a topic.
 - It is then difficult to distinguish the difference in meaning between the resulting topics.
-- This is largely a result of the bag-of-words portion of the data preparation for LDA. The word becomes disassociated from its original document and therefore within the presence of high frequency words in the documents, the models ability to measure which topic the word originated from is lessend to an undesirable extent.
+- This is largely a result of the bag-of-words portion of the data preparation for LDA. The word becomes disassociated from its original document and therefore within the presence of a group of documents with a small number of high frequency words, the models ability to measure which topic the word originated from is lessend to an undesirable extent.
 
 ## Document Similarity Matrix Clustering (DSMC)
 DSMC is a method of topic creation that considers all documents versus all the other documents in question and does not decompose the set of documents into a bag-of-words, keeping high frequency words within the context of their original document.
 ### Pro
-- As a result of the documents not being decomposed, this method can still generate meaningfully different groups of smiliar documents in the presence of proptionally high frequency words.
+- As a result of the documents not being decomposed, this method can still generate meaningfully different groups of smiliar documents in the presence of proptionally low, high frequency words.
 ### Con
-- DSCM is not a learned model in that its results can not be used to assign an unseen document to a previously created topic. It has to consider all documents in question everytime it needs to create topic clusters.
+- DSMC is not a learned model, its results can not be used to assign an unseen document to a previously created document group. It has to consider all documents in question everytime it needs to create similiar document groups.
 
 ## How DSMC Creates Similiar Document Groups
 - Creates a n x n similarity matrix using the desired document similarity scoring method.
