@@ -17,7 +17,7 @@ DSCM is a method of topic creation that considers all documents versus all the o
 ### Con
 - DSCM is not a learned model in that its results can not be used to assign an unseen document to a previously created topic. It has to consider all documents in question everytime it needs to create topic clusters.
 
-## What DSCM Does
+## How DSCM Creates Similiar Document Groups
 - Creates a n x n similarity matrix using the desired document similarity scoring method.
   - Jaccard
   - TF-IDF
@@ -26,4 +26,4 @@ DSCM is a method of topic creation that considers all documents versus all the o
   - Word2Vec
 - Optimizes the number of topics using an affinity matrix conversion of the similarity matrix, and then performs an eigen decomposition of that affinity matrix identifying the largest gap corresponding to the number of clusters by eigengap heuristic.
 - Applies spectral clustering to the original similarity matrix with the optimized best number of topics to assign documents to a group.
-- Cluster assignments are then be mapped back to the original comment, grouped by cluster assignment, and then viewed as the generated document groupings.
+- Cluster assignments are then be mapped back to the original comment, grouped by cluster assignment, and then viewed as the generated document groups.
