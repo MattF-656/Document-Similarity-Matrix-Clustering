@@ -32,7 +32,7 @@ DSMC is a method of topic creation that considers all documents versus all the o
 - Yet to implement a pre-trained model for calculating similarity scores.
   - Latest version of DSMC has used Jaccard and TF-IDF.
   - While TF-IDF yields better results than Jaccard, it appears there is always 2-3 document groups that contain a majority of the documents and are mostly longer in length than the documents assigned to the other groups.
-    - This is because the TF-IDF and Jaccard methods of calculating similarity are influenced by differences in lengths of documents hurting the accuracy of their scores.
+    - This is because the TF-IDF and Jaccard methods of calculating similarity are influenced by differences in lengths of documents hurting the accuracy of their scores between documents of noteable difference in length.
   - It is likely the pre-trained models can help with this.
 - Refine optimization for the number of clusters.
   - Current choice of k for the affinty matrix is arbitrary and this choice effects the eigen values when determining k for spectral clustering.
