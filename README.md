@@ -4,7 +4,7 @@ Document similarity comparison and clustering using similarity matricies and mat
 ## Latent Dirichlet Allocation (LDA)
 LDA is a generative bag-of-words model that uses probabilities to assign words to a topic that potentially insighted the use of that word. 
 ### Pro
-- It is a learned model, therefore can assign unseen documents to a topic that it generated during training.
+- It is a learned model, therefore it can assign unseen documents to a topic that it generated during training.
 ### Con
 - This method does not generate desirable topics in the presence of noisy data. That is, a set of many documents that have a proportionally small number of words that make up a majority of the documents. This results in a large amount of overlap in the weighted keywords that the model determined are important indicators when assigning documents to a topic.
 - It is then difficult to distinguish the difference in meaning between the resulting topics.
