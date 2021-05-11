@@ -28,7 +28,7 @@ DSMC is a method of topic creation that considers all documents versus all the o
 - Applies spectral clustering to the original similarity matrix with the optimized best number of topics to assign documents to a cluster.
 - Cluster assignments are then mapped back to the original comment, grouped by cluster assignment, and then viewed as the generated document groups.
 
-## Areas for Improvement
+## Potential Areas for Improvement
 - Yet to implement a pre-trained model for calculating similarity scores.
   - Latest version of DSMC has used Jaccard and TF-IDF.
   - While TF-IDF yields better results than Jaccard, it appears there is always 2-3 document groups that contain a majority of the documents and are mostly longer in length than the documents assigned to the other groups.
