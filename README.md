@@ -40,5 +40,5 @@ DSMC is a method of topic creation that considers all documents versus all the o
       - Potentially a gridsearch type solution, but this then creates the need to determine the best number of k from the eigen values therefore the quality of the clusters themselves.
   - Lower thresholds for determing cluster contents.
     - Overly specific clusters are being formed potentially as a result of k for the number of clusters being set too high by the optimization.
-      - May contribute to a few large clusters as the similarities of the small groups is so high the algorithm has nowhere else to put them and these 2-3 clusters become 'unknown categorizable' clusters.
+      - May contribute to a few large clusters as the similarities of the small groups is so high the algorithm has nowhere else to put them and these 2-3 clusters become 'uncategorizable' clusters.
       - Though, the use of pre-trained models may help to create more generalized representations of the documents regardless of length and remove this side effect of teh clutering.
